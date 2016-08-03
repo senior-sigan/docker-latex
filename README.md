@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
-- [`base`](https://github.com/blan4/docker-latex/base/Dockerfile)
-- [`pscyr`](https://github.com/blan4/docker-latex/pscyr/Dockerfile)
+- [`base`, (*base/Dockerfile*)](https://github.com/blan4/docker-latex/blob/master/base/Dockerfile)
+- [`pscyr`, (*pscyr/Dockerfile*)](https://github.com/blan4/docker-latex/blob/master/pscyr/Dockerfile)
 
 # What is LaTeX?
 
