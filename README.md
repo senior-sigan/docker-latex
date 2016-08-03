@@ -21,6 +21,8 @@ To compile your LaTeX work use Docker image directly:
 $ docker run -it --rm --name latexmk --net=none -v "$PWD":/data sigan/latex:pscyr latexmk -pdf -pdflatex="pdflatex %O %S" your_super_latex_file
 ```
 
+You can use any other latex commands if you know how.
+
 ### Notes
 
 The image assumes that your latex files, styles and extra files are located in some directory and you run script described above from this location.
