@@ -3,6 +3,8 @@
 - [`base`, (*base/Dockerfile*)](https://github.com/blan4/docker-latex/blob/master/base/Dockerfile)
 - [`pscyr`, (*pscyr/Dockerfile*)](https://github.com/blan4/docker-latex/blob/master/pscyr/Dockerfile)
 
+[![sigan/latex](http://dockeri.co/image/sigan/latex)](https://hub.docker.com/r/sigan/latex/)
+
 # What is LaTeX?
 
 LaTeX is a document preparation system. When writing, the writer uses plain text as opposed to formatted text, as in WYSIWYG word processors like Microsoft Word or LibreOffice Writer. The writer uses markup tagging conventions to define the general structure of a document (such as article, book, and letter), to stylise text throughout a document (such as bold and italic), and to add citations and cross-references. A TeX distribution such as TeX Live or MikTeX is used to produce an output file (such as PDF or DVI) suitable for printing or digital distribution.
