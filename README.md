@@ -25,6 +25,8 @@ $ docker run -it --rm --name latexmk --net=none -v "$PWD":/data sigan/latex:pscy
 
 You can use any other latex commands if you know how.
 
+Also you can copy scripts from `bin/` folder to you `/usr/local/bin` on the system. So for example jupyter-notebook will work.
+
 ### Notes
 
 The image assumes that your latex files, styles and extra files are located in some directory and you run script described above from this location.
