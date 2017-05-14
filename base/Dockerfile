@@ -1,6 +1,8 @@
-FROM ubuntu:14.04
+FROM ubuntu:17.04
 MAINTAINER Ilya Siganov <ilya.blan4@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get -yq update && apt-get install -qy --no-install-recommends lsb-release 
 
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections && \
 
@@ -11,7 +13,7 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula selec
     apt-get -y dist-upgrade && \
 
     apt-get install -qy --no-install-recommends \
-      unzip ttf-mscorefonts-installer \
+      make unzip ttf-mscorefonts-installer \
       latexmk biber python-pygments gnuplot cm-super \
       texlive-xetex texlive-generic-extra texlive-fonts-recommended lmodern fonts-liberation texlive-bibtex-extra \
       texlive-lang-cyrillic texlive-latex-extra texlive-science texlive-pstricks && \
