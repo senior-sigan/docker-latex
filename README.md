@@ -1,7 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
-- [`base`, (*base/Dockerfile*)](https://github.com/blan4/docker-latex/blob/master/base/Dockerfile)
-- [`pscyr`, (*pscyr/Dockerfile*)](https://github.com/blan4/docker-latex/blob/master/pscyr/Dockerfile)
+- [`latest`, (*src/Dockerfile*)](https://github.com/blan4/docker-latex/blob/master/src/Dockerfile)
 
 [![sigan/latex](http://dockeri.co/image/sigan/latex)](https://hub.docker.com/r/sigan/latex/)
 
@@ -20,7 +19,7 @@ LaTeX is a document preparation system. When writing, the writer uses plain text
 To compile your LaTeX work use Docker image directly:
 
 ```bash
-$ docker run -it --rm --name latexmk --net=none -v "$PWD":/data sigan/latex:pscyr latexmk -pdf -pdflatex="pdflatex %O %S" your_super_latex_file
+$ docker run -it --rm --name latexmk --net=none -v "$PWD":/data sigan/latex latexmk -pdf -pdflatex="pdflatex %O %S" your_super_latex_file
 ```
 
 You can use any other latex commands if you know how.
@@ -33,15 +32,9 @@ The image assumes that your latex files, styles and extra files are located in s
 
 # Image Variants
 
-The `latex` images come in many flavours, each designed for a specific use case.
+## `sigan/latex:latest`
 
-## `sigan/latex:base`
-
-This is default image with preinstalled and configured TexLive package. Latex extras, science packages and common fonts are included. Only english and russian language packs are installed.
-
-## `sigan/latex:pscyr`
-
-This is `base` image with PSCyr fonts.
+This is default image with preinstalled and configured TexLive package. Latex extras, science packages and common fonts are included. Only english and russian language packs are installed. There is also PSCyr fonts.
 
 # Supported Docker versions
 

@@ -1,2 +1,2 @@
 #!/bin/sh
-exec docker run --rm -i --net=none -v $PWD:/data sigan/latex:pscyr bibtex "$@"
+exec docker run --rm -i --net=none -v $PWD:/data sigan/latex bibtex "$@"

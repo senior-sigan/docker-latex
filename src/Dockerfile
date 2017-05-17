@@ -24,5 +24,8 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula selec
 
     fc-cache -fv
 
+COPY PSCyr.zip install.sh /tmp/
+RUN bash /tmp/install.sh
+
 WORKDIR /data
 VOLUME ["data"]

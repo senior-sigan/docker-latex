@@ -1,4 +1,4 @@
-TAG = sigan/latex:pscyr
+TAG = sigan/latex:latest
 
 build:
 	docker build --tag $(TAG) --rm .
