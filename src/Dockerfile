@@ -13,7 +13,7 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula selec
     apt-get -y dist-upgrade && \
 
     apt-get install -qy --no-install-recommends \
-      make unzip ttf-mscorefonts-installer \
+      make unzip curl ttf-mscorefonts-installer \
       latexmk biber python-pygments gnuplot cm-super \
       texlive-xetex texlive-generic-extra texlive-fonts-recommended lmodern fonts-liberation texlive-bibtex-extra \
       texlive-lang-cyrillic texlive-latex-extra texlive-science texlive-pstricks && \
