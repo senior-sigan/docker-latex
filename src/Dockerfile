@@ -16,10 +16,15 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula selec
     apt-get autoclean -qy && \
     apt-get autoremove -qy && \
 
-    fc-cache -fv
+    fc-cache -fv && \
+
+    wget && \
+    xzdec
 
 COPY PSCyr.zip install.sh /tmp/
 RUN bash /tmp/install.sh
+
+RUN tlmgr init-usertree && tlmgr install impnattypo
 
 WORKDIR /data
 VOLUME ["data"]
