@@ -6,12 +6,6 @@ RUN apt-get -yq update && apt-get install -qy --no-install-recommends lsb-releas
 
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections && \
 
-    echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) multiverse" | tee -a /etc/apt/sources.list && \
-    echo "deb-src http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) multiverse" | tee -a /etc/apt/sources.list && \
-
-    apt-get -yq update && \
-    apt-get -y dist-upgrade && \
-
     apt-get install -qy --no-install-recommends \
       make unzip curl ttf-mscorefonts-installer \
       latexmk biber python-pygments gnuplot cm-super \
