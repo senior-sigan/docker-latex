@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:17.10
 MAINTAINER Ilya Siganov <ilya.blan4@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
