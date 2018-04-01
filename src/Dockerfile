@@ -1,16 +1,10 @@
-FROM ubuntu:17.04
+FROM ubuntu:17.10
 MAINTAINER Ilya Siganov <ilya.blan4@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -yq update && apt-get install -qy --no-install-recommends lsb-release 
 
 RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections && \
-
-    echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) multiverse" | tee -a /etc/apt/sources.list && \
-    echo "deb-src http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) multiverse" | tee -a /etc/apt/sources.list && \
-
-    apt-get -yq update && \
-    apt-get -y dist-upgrade && \
 
     apt-get install -qy --no-install-recommends \
       make unzip curl ttf-mscorefonts-installer \
@@ -22,10 +16,15 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula selec
     apt-get autoclean -qy && \
     apt-get autoremove -qy && \
 
-    fc-cache -fv
+    fc-cache -fv && \
+
+    wget && \
+    xzdec
 
 COPY PSCyr.zip install.sh /tmp/
 RUN bash /tmp/install.sh
+
+RUN tlmgr init-usertree && tlmgr install impnattypo
 
 WORKDIR /data
 VOLUME ["data"]
